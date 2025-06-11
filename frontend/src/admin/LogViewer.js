@@ -38,15 +38,51 @@ const LogViewer = () => {
     try {
       setLoading(true);
       
+      // URL base da API a partir das variáveis de ambiente
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+      
       // Faz a requisição para a API
-      const response = await axios.get('/api/logs', { params: filters });
+      const response = await axios.get(`${apiUrl}/api/logs`, { params: filters });
       
       // Atualiza o estado com os logs recebidos
-      setLogs(response.data.logs);
+      setLogs(response.data.logs || []);
       setError(null);
     } catch (err) {
       console.error('Erro ao buscar logs:', err);
-      setError('Não foi possível carregar os logs. Tente novamente mais tarde.');
+      
+      // Dados simulados para demonstração quando a API não está disponível
+      const mockLogs = [
+        {
+          _id: '1',
+          eventType: 'page_view',
+          userId: 'user_123',
+          productId: null,
+          severity: 'info',
+          message: 'Usuário visualizou a página inicial',
+          createdAt: new Date().toISOString()
+        },
+        {
+          _id: '2',
+          eventType: 'product_view',
+          userId: 'user_123',
+          productId: 'prod_456',
+          severity: 'info',
+          message: 'Usuário visualizou produto: Tênis Esportivo',
+          createdAt: new Date(Date.now() - 3600000).toISOString()
+        },
+        {
+          _id: '3',
+          eventType: 'error',
+          userId: 'user_789',
+          productId: null,
+          severity: 'error',
+          message: 'Erro ao processar pagamento',
+          createdAt: new Date(Date.now() - 7200000).toISOString()
+        }
+      ];
+      
+      setLogs(mockLogs);
+      setError('Usando dados simulados - API de logs não disponível no momento.');
     } finally {
       setLoading(false);
     }

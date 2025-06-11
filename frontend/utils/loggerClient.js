@@ -23,8 +23,9 @@ class LoggerClient {
    * @param {Function} options.errorHandler - Função para tratamento de erros
    */
   constructor(options = {}) {
-    // URL base da API de logs
-    this.apiUrl = options.apiUrl || '/api/logs';
+    // URL base da API de logs a partir das variáveis de ambiente
+    const baseApiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+    this.apiUrl = options.apiUrl || `${baseApiUrl}/api/logs`;
     
     // Modo de depuração
     this.debug = options.debug || false;
