@@ -158,4 +158,4 @@ Se quiser conversar sobre esse projeto ou contratar meus serviços como desenvol
 
 💼https://www.linkedin.com/in/fabiano-pedroso-a1110278/
 
-📧 fabianompedroso@hotmail.com 
+📧 fabianompedroso@hotmail.com
