@@ -1,0 +1,219 @@
+{
+  "dailySales": [
+    {
+      "date": "2025-05-05",
+      "amount": 10284.4
+    },
+    {
+      "date": "2025-05-06",
+      "amount": 7889
+    },
+    {
+      "date": "2025-05-07",
+      "amount": 11977
+    },
+    {
+      "date": "2025-05-08",
+      "amount": 6227
+    },
+    {
+      "date": "2025-05-09",
+      "amount": 6918
+    },
+    {
+      "date": "2025-05-10",
+      "amount": 16312.4
+    },
+    {
+      "date": "2025-05-11",
+      "amount": 16555.5
+    },
+    {
+      "date": "2025-05-12",
+      "amount": 9890.3
+    },
+    {
+      "date": "2025-05-13",
+      "amount": 11106
+    },
+    {
+      "date": "2025-05-14",
+      "amount": 13013
+    },
+    {
+      "date": "2025-05-15",
+      "amount": 10293
+    },
+    {
+      "date": "2025-05-16",
+      "amount": 12709
+    },
+    {
+      "date": "2025-05-17",
+      "amount": 17696.9
+    },
+    {
+      "date": "2025-05-18",
+      "amount": 18704.4
+    },
+    {
+      "date": "2025-05-19",
+      "amount": 6286
+    },
+    {
+      "date": "2025-05-20",
+      "amount": 6890
+    },
+    {
+      "date": "2025-05-21",
+      "amount": 6124
+    },
+    {
+      "date": "2025-05-22",
+      "amount": 11291
+    },
+    {
+      "date": "2025-05-23",
+      "amount": 9362
+    },
+    {
+      "date": "2025-05-24",
+      "amount": 15588.3
+    },
+    {
+      "date": "2025-05-25",
+      "amount": 7926.1
+    },
+    {
+      "date": "2025-05-26",
+      "amount": 8252.3
+    },
+    {
+      "date": "2025-05-27",
+      "amount": 8921
+    },
+    {
+      "date": "2025-05-28",
+      "amount": 6910
+    },
+    {
+      "date": "2025-05-29",
+      "amount": 9207
+    },
+    {
+      "date": "2025-05-30",
+      "amount": 13976
+    },
+    {
+      "date": "2025-05-31",
+      "amount": 6574.1
+    },
+    {
+      "date": "2025-06-01",
+      "amount": 15869.1
+    },
+    {
+      "date": "2025-06-02",
+      "amount": 4194.4
+    },
+    {
+      "date": "2025-06-03",
+      "amount": 5166
+    },
+    {
+      "date": "2025-06-04",
+      "amount": 7370
+    }
+  ],
+  "salesByCategory": [
+    {
+      "category": "Calçados",
+      "sales": 25191.6
+    },
+    {
+      "category": "Vestuário",
+      "sales": 11327.4
+    },
+    {
+      "category": "Eletrônicos",
+      "sales": 322063.9
+    },
+    {
+      "category": "Acessórios",
+      "sales": 15830.1
+    }
+  ],
+  "deviceUsage": [
+    {
+      "device": "Desktop",
+      "percentage": 45.2
+    },
+    {
+      "device": "Mobile",
+      "percentage": 42.7
+    },
+    {
+      "device": "Tablet",
+      "percentage": 15.6
+    }
+  ],
+  "popularCustomizations": [
+    {
+      "type": "Material",
+      "value": "Sintético",
+      "count": 437
+    },
+    {
+      "type": "Material",
+      "value": "Algodão",
+      "count": 418
+    },
+    {
+      "type": "Tamanho",
+      "value": "M",
+      "count": 386
+    },
+    {
+      "type": "Cor",
+      "value": "Vermelho",
+      "count": 361
+    },
+    {
+      "type": "Cor",
+      "value": "Preto",
+      "count": 344
+    },
+    {
+      "type": "Cor",
+      "value": "Azul",
+      "count": 337
+    },
+    {
+      "type": "Cor",
+      "value": "Branco",
+      "count": 328
+    },
+    {
+      "type": "Estampa",
+      "value": "Xadrez",
+      "count": 290
+    },
+    {
+      "type": "Estampa",
+      "value": "Lisa",
+      "count": 173
+    },
+    {
+      "type": "Tamanho",
+      "value": "GG",
+      "count": 120
+    }
+  ],
+  "metrics": {
+    "totalRevenue": 333093.4,
+    "orderCount": 988,
+    "averageOrderValue": 337.14,
+    "returnRate": 2.6,
+    "customerSatisfaction": 4.2
+  }
+}
