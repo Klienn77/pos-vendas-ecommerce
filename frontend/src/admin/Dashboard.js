@@ -45,14 +45,58 @@ const Dashboard = () => {
 const fetchDashboardData = useCallback(async () => {
   try {
     setLoading(true);
-    const response = await axios.get('/api/stats/dashboard', {
+    
+    // URL base da API a partir das variáveis de ambiente
+    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+    
+    const response = await axios.get(`${apiUrl}/api/stats/dashboard`, {
       params: { period: dateRange }
     });
     setDashboardData(response.data.dashboardData);
     setError(null);
   } catch (err) {
     console.error('Erro ao buscar dados do dashboard:', err);
-    setError('Não foi possível carregar os dados do dashboard. Tente novamente mais tarde.');
+    
+    // Dados simulados para demonstração quando a API não está disponível
+    const mockData = {
+      metrics: {
+        totalRevenue: '125000.00',
+        averageOrderValue: '250.00',
+        returnRate: '3.2',
+        customerSatisfaction: '4.5'
+      },
+      dailySales: [
+        { date: '2025-06-04', amount: 5000 },
+        { date: '2025-06-05', amount: 7500 },
+        { date: '2025-06-06', amount: 6200 },
+        { date: '2025-06-07', amount: 8100 },
+        { date: '2025-06-08', amount: 9300 },
+        { date: '2025-06-09', amount: 7800 },
+        { date: '2025-06-10', amount: 8500 },
+        { date: '2025-06-11', amount: 9200 }
+      ],
+      salesByCategory: [
+        { category: 'Eletrônicos', sales: 45000 },
+        { category: 'Roupas', sales: 32000 },
+        { category: 'Casa & Jardim', sales: 28000 },
+        { category: 'Esportes', sales: 20000 }
+      ],
+      deviceUsage: [
+        { device: 'Desktop', percentage: 45 },
+        { device: 'Mobile', percentage: 40 },
+        { device: 'Tablet', percentage: 15 }
+      ],
+      popularCustomizations: [
+        { type: 'Cor', value: 'Azul', count: 156 },
+        { type: 'Tamanho', value: 'M', count: 134 },
+        { type: 'Material', value: 'Algodão', count: 98 },
+        { type: 'Cor', value: 'Preto', count: 87 },
+        { type: 'Tamanho', value: 'G', count: 76 }
+      ]
+    };
+    
+    setDashboardData(mockData);
+    setError('Usando dados simulados - API de estatísticas não disponível no momento.');
   } finally {
     setLoading(false);
   }
